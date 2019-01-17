@@ -1,0 +1,49 @@
+  header{
+    background-color: black;
+    min-height: 100px;
+  }
+
+  footer{
+    background-color: black;
+    height: 250px;
+    color:white;
+  }
+  .icon-menu{
+    margin-left:20px;
+    margin-right:20px;
+  }
+  .menu{
+    color:#fff;
+    font-size: 12px; 
+    text-align: center;
+  }
+
+  .menu img{
+    cursor: pointer;
+  }
+
+  .logo{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: url('../assets/img/logo.png');
+    background-size: 50px 50px; 
+  }
+
+  .logo:hover{
+    background: url('../assets/img/logo-fill.png');
+    background-size: 50px 50px; 
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  .nav-item{
+    color:#fff;
+    cursor: pointer;
+  }
+
+  .icon-menu:hover{
+    transform: scale(1.3); 
+    transition: transform .2s;
+  }
