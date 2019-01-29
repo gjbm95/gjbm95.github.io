@@ -12,7 +12,7 @@ export class ApiService {
     public myMethod$: Observable<any>;
     public headersClient:HttpHeaders= new HttpHeaders({ 'Content-Type': 'application/json' })  
     public request: RemoteRequest = new RemoteRequest();
-    public host:string = "http://garrybruno.com.ve"; 
+    public host:string = "https://garrybruno.com.ve"; 
     public cors:string = "https://cors-anywhere.herokuapp.com/"; 
 
 
