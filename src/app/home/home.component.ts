@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit {
 
   constructor(public formBuilder: FormBuilder,
               public api:ApiService) { 
-    this.visitAlert();
   }
 
   ngOnInit() {
