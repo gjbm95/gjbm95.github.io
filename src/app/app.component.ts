@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Constants } from './utils/contants';
 
 @Component({
   selector: 'app-root',
@@ -62,6 +63,10 @@ export class AppComponent {
        top: elementPosition -100, 
        behavior: "smooth"
     });
+  }
+
+  goSandbox(){
+   window.location.href = Constants.baseUrl + "sandbox";
   }
 
   goAcademics(){

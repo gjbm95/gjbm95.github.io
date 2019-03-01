@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { ApiService } from '../services/api.service';
+import { Constants } from '../utils/contants';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -50,6 +51,10 @@ export class HomeComponent implements OnInit {
        top: elementPosition -100, 
        behavior: "smooth"
     });
+  }
+
+  goSandbox(){
+    window.location.href = Constants.baseUrl + "sandbox";
   }
 
   public sendRequest(){
