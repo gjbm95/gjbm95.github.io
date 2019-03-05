@@ -9,7 +9,7 @@ import { Constants } from './utils/contants';
 export class AppComponent {
   title = 'app';
   headerOffset = 100;
-  year = new Date().getFullYear();; 
+  year = new Date().getFullYear();
 
   goHome(){
     var element = document.getElementById("home");

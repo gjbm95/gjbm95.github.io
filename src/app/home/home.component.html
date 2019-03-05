@@ -28,13 +28,25 @@
        </div>
     </div>
 </div>
-<div class="row arrow-zone d-none d-lg-block ">
-    <div class="col-md-12">
-        <br>
-        <br>
-        <img class="center-image arrow" (click)="goAboutme()" width="270" height="100" src="../assets/img/arrow-icon.png">  
+<div class="arrow-zone d-none d-lg-block ">
+   <div class="row ">
+    <div class="col-4">
+      <br>
+      <br>
+      <img class="center-image" src="../assets/img/left-image.png"> 
     </div>
-</div>
+    <div class="col-4">
+        <br>
+        <br>
+        <img class="center-image arrow" (click)="goAboutme()" width="270" height="100" src="../assets/img/arrow-icon.png"> 
+    </div>
+    <div class="col-4">
+        <br>
+        <br>
+      <img class="center-image" src="../assets/img/right-image.png">
+    </div>
+  </div>
+</div> 
 <div id="aboutme" class="row zone2">
     <div class="col-md-12">
        <div class="container">
@@ -53,11 +65,15 @@
             <div class="col-md-9"> 
                 <br>
                 <p>
-                Mi nombre es Garry Jr. Bruno. Soy un joven de 23 años, Ingeniero en Informática egresado de la Universidad Católica Andrés Bello. Soy de Caracas, Venezuela. Desde muy pequeño me ha interesado mucho
-                el mundo de la computación y las herramientas que esta provee para solucionar los problemas que se puedan presentar en diversos entornos de nuestra vida cotidiana. 
+                  Mi nombre es Garry Jr. Bruno. Soy un joven de {{ age }} años, Ingeniero en Informática egresado de la Universidad Católica Andrés Bello. Soy de Caracas, Venezuela. Desde muy pequeño me ha interesado mucho
+                  el mundo de la computación y todo lo relacionado con el manejo automatizado de la información. 
                 </p>
                 <p>
-                    Durante mi etapa de estudiante, tanto en el bachillerato como en la universidad he aprendido a trabajar en equipo, valorando el trabajo y el esfuerzo de cada uno de sus integrantes, escuchando sus opiniones y puntos de vista. Todo esto con la finalidad de que en lo posible, se pueda tener un buen resultado a futuro en algún proyecto que se realice. 
+                  Me gusta como de la mano de los avances tecnológicos podemos satisfacer las necesidades de las personas, aportando herramientas que facilitan cada vez más las tareas cotidianas y dando un aporte positivo
+                  al entorno.
+                </p>
+                <p>
+                  Durante mi etapa como estudiante, tanto en el bachillerato como en la universidad he aprendido a trabajar en equipo, valorando el trabajo y el esfuerzo de cada uno de sus integrantes, escuchando sus opiniones y puntos de vista. Todo esto con la finalidad de que en lo posible, se pueda tener un buen resultado a futuro en algún proyecto que se realice.
                 </p>
             </div>
          </div>

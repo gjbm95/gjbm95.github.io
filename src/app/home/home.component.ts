@@ -23,6 +23,8 @@ export class HomeComponent implements OnInit {
   subject:FormControl = new FormControl('',[Validators.required]);
   message:FormControl = new FormControl('',[Validators.required]);
 
+  age = new Date().getFullYear() - 1996;
+
   constructor(public formBuilder: FormBuilder,
               public api:ApiService) { 
   }
