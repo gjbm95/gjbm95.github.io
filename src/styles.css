@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900');
+
 body{
     overflow-x: hidden;
-    background-color: rgb(42, 166, 238);
+    background-color: white;
     font-family: 'Maven Pro', sans-serif;
 }
 
@@ -24,4 +25,21 @@ body{
 
 hr{
     border-color: white;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.vertical-center{ 
+    margin-top: auto; 
+    margin-bottom: auto; 
 }

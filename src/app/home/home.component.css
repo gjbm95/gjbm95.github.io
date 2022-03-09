@@ -1,176 +1,41 @@
-.main-content{
-    min-height: 2700px;
+.block-1{
+    background-color: rgb(0, 112, 192);
+    color:white;
+    min-height: 520px;
 }
 
-.arrow-zone{
-    min-height: 280px;
+.block-1 a{
+    color: white; 
 }
 
-.zone1{
-   margin-top: 100px;
-   min-height: 300px;
-}
-.zone2{
-   min-height: 400px;
-   background-color: #fff;    
-}
-.zone3{
-   min-height: 400px;
-   background-color: rgb(187, 188, 189);  
-
-}
- 
- .zone5{
-    min-height: 600px;
-    color:#000;
- }
-
- .zone6{
-    min-height: 400px;
-    color:#000;
-    background-color: #fff;
- }
-
- .zone7{
-    min-height: 400px;
-    color:#fff;
-    background-color: #000;
- }
-
-.card{
-    color:#000;
-    margin:20px;
-    background-color: transparent;
-    border-color: transparent;
+.block-2{
+    min-height: 220px;
 }
 
-.zone4{
-  color:#000; 
-  min-height: 600px;
+.block-3{
+    background-color: white;
+    min-height: 500px;
+    color: rgb(0, 112, 192);
 }
 
-.icon-skill{
-    margin:20px;
-    transition: transform .2s;
-    display:block;
-}
 
-.icon-skill:hover {
-    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
+.v1{
+    border-left: 6px solid white;
+    height: 130px;
+}  
 
-.left-element{
-    animation-duration: 3s;
-    animation-name: slidein-left;
-}
+.h1{
+    border-bottom: 6px solid white;
+    width: 230px;
+}  
 
-.right-element{
-    animation-duration: 3s;
-    animation-name: slidein-right;
-}
 
-@keyframes slidein-left {
-    from {
-      margin-left: -50%;
-    }
-    to {
-      margin-left: 14%;
-    }
-} 
-
-@keyframes slidein-right {
-    from {
-      margin-left: 50%;
-    }
-    to {
-      margin-left: 0%;
-    }
-} 
-
-.secondary-text{
-    font-size: 23px;
-    font-weight: bold;
-}
-
-.form-control{
-    background-color: #ced4da;
-}
-
-.project-decription{
-    font-size: 12px;
-}
-
-.arrow{
-  cursor: pointer;
-  animation: bounce 0.8s;
-  animation-direction: alternate;
-  animation-timing-function: cubic-bezier(.5,0.05,1,.5);
-  animation-iteration-count: infinite;
-}
-
-@keyframes bounce {
-  from { transform: translate3d(0, 0, 0);     }
-  to   { transform: translate3d(0, 120px, 0); } 
-}
-
-/* Prefix Support */
-arrow {
-  -webkit-animation-name: bounce;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-direction: alternate;
-  -webkit-animation-timing-function: cubic-bezier(.5,0.05,1,.5);
-  -webkit-animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes bounce {
-  from { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-  to   { -webkit-transform: translate3d(0, 200px, 0); transform: translate3d(0, 200px, 0); }
-}
-
-.project-image{
+.h1-full{
+    border-bottom: 6px solid rgb(0, 112, 192);
     width: 100%;
-    height: auto;
-}
+}  
 
-.billing{
-    text-align: center;
-    font-size: 23px;
-    font-weight: bold;
-    color:#000;
-    cursor: pointer;
-}
 
-.modal-content{
-    -webkit-border-radius: 0px !important;
-    -moz-border-radius: 0px !important;
-    border-radius: 0px !important; 
-}    
-
-.modal-header,  .modal-footer{
-    background-color: #000;
-    color:#fff; 
-}
-
-.modal{
-    top: 10px;
-}
-
-.close {
-    color: #fff; 
-    opacity: 1;
-}
-
-hr{
-    border-color:gray; 
-}
- 
-.link{
-    color:#000;
-    font-weight: bold;
-}
-
-@media only screen and (min-width: 1000px) {
-    .main-banner{
-       display:block!important; 
-    }
+.name-title{
+    font-size: 80px;
 }
