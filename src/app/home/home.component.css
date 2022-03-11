@@ -18,6 +18,11 @@
     color: rgb(0, 112, 192);
 }
 
+.block-4{
+    background-color: white;
+    min-height: 200px;
+    color: rgb(0, 112, 192);
+}
 
 .v1{
     border-left: 6px solid white;
@@ -29,13 +34,36 @@
     width: 230px;
 }  
 
-
 .h1-full{
     border-bottom: 6px solid rgb(0, 112, 192);
     width: 100%;
 }  
-
-
+ 
 .name-title{
     font-size: 80px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after{
+  content: '>';
+  font-size: 55px;
+  color: rgb(0, 112, 192);
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: rgb(0, 112, 192);
+}
+
+.carousel-item{
+    min-height: 200px;
 }
