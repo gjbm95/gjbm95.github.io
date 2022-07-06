@@ -24,6 +24,12 @@
     color: rgb(0, 112, 192);
 }
 
+.block-5{
+  background-color: rgb(0, 112, 192);
+  color:white;
+  min-height: 100%;
+}
+
 .v1{
     border-left: 6px solid white;
     height: 130px;
@@ -75,6 +81,25 @@
 
 .icon-skill:hover{
     transform: scale(1.5);
+}
+
+.icon-logo{
+  transition: transform .2s;
+}
+
+.icon-logo:hover{
+  transform: scale(1.5);
+}
+
+.card{
+  margin:10px;
+  width: 18rem;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.card:hover{
+  transform: scale(1.1);
 }
 
 /* Tooltip container */

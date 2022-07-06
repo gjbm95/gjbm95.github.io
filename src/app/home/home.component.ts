@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { ApiService } from '../services/api.service';
 import { Constants } from '../utils/contants';
+import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 @Component({
-  selector: 'app-home',
+  selector: 'app-home', 
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -26,6 +28,7 @@ export class HomeComponent implements OnInit {
   age = new Date().getFullYear() - 1996;
 
   constructor(public formBuilder: FormBuilder,
+              public dialog: MatDialog,
               public api:ApiService) { 
   }
 
@@ -44,6 +47,14 @@ export class HomeComponent implements OnInit {
       "subject":this.subject,
       "message":this.message
     }); 
+  }
+
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(ProjectDetailComponent, {
+      width: '250px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
   }
 
   goAboutme(){

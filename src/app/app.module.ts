@@ -7,6 +7,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from './services/api.service';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectDetailComponent } from './home/components/project-detail/project-detail.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 const appRoutes: Routes = [
   { path: 'inicio', component: HomeComponent },
@@ -17,7 +19,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ProjectDetailComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -25,7 +28,8 @@ const appRoutes: Routes = [
     HttpModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserModule
+    BrowserModule,
+    MatDialogModule,
   ],
   providers: [
     ApiService
