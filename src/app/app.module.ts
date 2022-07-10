@@ -9,6 +9,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectDetailComponent } from './home/components/project-detail/project-detail.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   { path: 'inicio', component: HomeComponent },
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     BrowserModule,
     MatDialogModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     ApiService

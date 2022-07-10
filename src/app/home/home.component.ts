@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../services/api.service';
 import { Constants } from '../utils/contants';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
@@ -11,7 +11,7 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
 })
 export class HomeComponent implements OnInit {
 
-  billingForm:FormGroup;
+  billingForm!:FormGroup;
   fullname:FormControl = new FormControl('',[Validators.required]);
   email:FormControl = new FormControl('',[Validators.required,Validators.email]);
   phone:FormControl = new FormControl('');
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   description:FormControl = new FormControl('',[Validators.required]);
   date:FormControl = new FormControl('',[Validators.required]);
 
-  messageForm:FormGroup;
+  messageForm!:FormGroup;
   from:FormControl = new FormControl('',[Validators.required,Validators.email]);
   subject:FormControl = new FormControl('',[Validators.required]);
   message:FormControl = new FormControl('',[Validators.required]);
@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
   constructor(public formBuilder: FormBuilder,
               public dialog: MatDialog,
               public api:ApiService) { 
+
   }
 
   ngOnInit() {
@@ -41,25 +42,23 @@ export class HomeComponent implements OnInit {
       "type":this.type,
       "description":this.description,
       "date":this.date
-    });
-    this.messageForm = this.formBuilder.group({
+  });
+  this.messageForm = this.formBuilder.group({
       "from":this.from,
       "subject":this.subject,
       "message":this.message
-    }); 
+  }); 
   }
 
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+  openDialog(): void {
     this.dialog.open(ProjectDetailComponent, {
       width: '250px',
-      enterAnimationDuration,
-      exitAnimationDuration,
     });
   }
 
   goAboutme(){
     var element = document.getElementById("aboutme");
-    var elementPosition = element.offsetTop;
+    var elementPosition = element!.offsetTop;
     window.scrollTo({
        top: elementPosition -100, 
        behavior: "smooth"
@@ -72,17 +71,17 @@ export class HomeComponent implements OnInit {
 
   public sendRequest(){
       if(this.billingForm.valid){
-        this.api.registerProject(this.billingForm,this).toPromise()
-          .then(
-            res => { // Success
-              let result= res.text();
-              if (result == 'Registro satisfactorio'){
-                 alert("¡Se ha enviado su solicitud con éxito!");
-              }else{
-                 alert("¡Hubo un error durante el envío de los datos!");
-              }
+        this.api.registerProject(this.billingForm)?.subscribe(
+          val => {},
+          response => {
+            let result= response.text();
+            if (result == 'Envio satisfactorio'){
+               alert("¡Se ha enviado su solicitud con éxito!");
+            }else{
+               alert("¡Hubo un error durante el envío de los datos!");
             }
-          );
+          }
+      );;
       }else{ 
         alert("Hay algún campo inválido");
       }
@@ -90,24 +89,19 @@ export class HomeComponent implements OnInit {
 
   public sendMessage(){
       if(this.messageForm.valid){
-        this.api.sendMessage(this.messageForm,this).toPromise()
-        .then(
-          res => { // Success
-            let result= res.text();
+        this.api.sendMessage(this.messageForm)?.subscribe(
+          val => {},
+          response => {
+            let result= response.text();
             if (result == 'Envio satisfactorio'){
                alert("¡Se ha enviado su solicitud con éxito!");
             }else{
                alert("¡Hubo un error durante el envío de los datos!");
             }
           }
-        );
-      }else{
-        alert("Hay algún campo inválido");
-      }
+      );
+    }
   }
 
-  public visitAlert(){
-    this.api.visitAlert().toPromise().then( res => { } );
-  }
 
 } 

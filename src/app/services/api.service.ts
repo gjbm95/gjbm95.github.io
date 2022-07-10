@@ -1,30 +1,25 @@
 import { Injectable } from '@angular/core';
-import { Http, RequestOptions, RequestMethod, Request, Headers,Response } from '@angular/http';
 import { HttpClient, HttpHeaders  } from '@angular/common/http';
 import { RemoteRequest } from '../models/remoterequest.model';
-import { Observable } from 'rxjs';
 
 @Injectable()
 export class ApiService {
 
     public headers: Headers;
-    public options: RequestOptions;
-    public myMethod$: Observable<any>;
     public headersClient:HttpHeaders= new HttpHeaders({ 'Content-Type': 'application/json' })  
     public request: RemoteRequest = new RemoteRequest();
     public host:string = "https://garrybruno.com.ve"; 
     public cors:string = "https://cors-anywhere.herokuapp.com/"; 
 
 
-    constructor(public http: Http,public httpClient:HttpClient) {
+    constructor(public http:HttpClient) {
         this.headers = new Headers({
           'Access-Control-Allow-Origin':'*',
           'Content-Type': 'application/json',
           'Accept': 'text/plain' });
-        this.options = new RequestOptions({ headers: this.headers });
     }
 
-    public registerProject(form,front){
+    public registerProject(form:any){
             try{
                 let param = {
                     name : form.get('fullname').value,
@@ -42,7 +37,7 @@ export class ApiService {
             }
     }
 
-    public sendMessage(form,front){
+    public sendMessage(form:any){
         try{
             let param = {
                 subject : form.get('subject').value,

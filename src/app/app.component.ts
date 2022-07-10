@@ -13,7 +13,7 @@ export class AppComponent {
 
   goHome(){
     var element = document.getElementById("home");
-    var elementPosition = element.offsetTop;
+    var elementPosition = element!.offsetTop;
     window.scrollTo({
        top: elementPosition -100, 
        behavior: "smooth"
@@ -22,7 +22,7 @@ export class AppComponent {
 
   goAboutme(){
      var element = document.getElementById("aboutme");
-     var elementPosition = element.offsetTop;
+     var elementPosition = element!.offsetTop;
      window.scrollTo({
         top: elementPosition -100, 
         behavior: "smooth"
@@ -31,7 +31,7 @@ export class AppComponent {
 
   goContact(){
     var element = document.getElementById("contact");
-    var elementPosition = element.offsetTop;
+    var elementPosition = element!.offsetTop;
     window.scrollTo({
        top: elementPosition -100, 
        behavior: "smooth"
@@ -40,7 +40,7 @@ export class AppComponent {
 
   goProject(){
     var element = document.getElementById("project");
-    var elementPosition = element.offsetTop;
+    var elementPosition = element!.offsetTop;
     window.scrollTo({
        top: elementPosition -100, 
        behavior: "smooth"
@@ -49,7 +49,7 @@ export class AppComponent {
 
   goTools(){
     var element = document.getElementById("tools");
-    var elementPosition = element.offsetTop;
+    var elementPosition = element!.offsetTop;
     window.scrollTo({
        top: elementPosition -100, 
        behavior: "smooth"
@@ -58,7 +58,7 @@ export class AppComponent {
 
   goPublications(){
     var element = document.getElementById("publications");
-    var elementPosition = element.offsetTop;
+    var elementPosition = element!.offsetTop;
     window.scrollTo({
        top: elementPosition -100, 
        behavior: "smooth"
@@ -71,7 +71,7 @@ export class AppComponent {
 
   goAcademics(){
       var element = document.getElementById("academics");
-      var elementPosition = element.offsetTop;
+      var elementPosition = element!.offsetTop;
       window.scrollTo({
          top: elementPosition -100, 
          behavior: "smooth"
