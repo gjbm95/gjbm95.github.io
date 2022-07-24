@@ -11,21 +11,21 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
 })
 export class HomeComponent implements OnInit {
 
-  billingForm!:FormGroup;
-  fullname:FormControl = new FormControl('',[Validators.required]);
-  email:FormControl = new FormControl('',[Validators.required,Validators.email]);
-  phone:FormControl = new FormControl('');
-  country:FormControl = new FormControl('',[Validators.required]);
-  type:FormControl = new FormControl('',[Validators.required]);
-  description:FormControl = new FormControl('',[Validators.required]);
-  date:FormControl = new FormControl('',[Validators.required]);
+  public billingForm!:FormGroup;
+  public fullname:FormControl = new FormControl('',[Validators.required]);
+  public email:FormControl = new FormControl('',[Validators.required,Validators.email]);
+  public phone:FormControl = new FormControl('');
+  public country:FormControl = new FormControl('',[Validators.required]);
+  public type:FormControl = new FormControl('',[Validators.required]);
+  public description:FormControl = new FormControl('',[Validators.required]);
+  public date:FormControl = new FormControl('',[Validators.required]);
 
-  messageForm!:FormGroup;
-  from:FormControl = new FormControl('',[Validators.required,Validators.email]);
-  subject:FormControl = new FormControl('',[Validators.required]);
-  message:FormControl = new FormControl('',[Validators.required]);
+  public messageForm!:FormGroup;
+  public from:FormControl = new FormControl('',[Validators.required,Validators.email]);
+  public subject:FormControl = new FormControl('',[Validators.required]);
+  public message:FormControl = new FormControl('',[Validators.required]);
 
-  age = new Date().getFullYear() - 1996;
+  public age = new Date().getFullYear() - 1996;
 
   constructor(public formBuilder: FormBuilder,
               public dialog: MatDialog,
@@ -52,7 +52,8 @@ export class HomeComponent implements OnInit {
 
   openDialog(): void {
     this.dialog.open(ProjectDetailComponent, {
-      width: '250px',
+      width: '650px',
+      height: '420px'
     });
   }
 

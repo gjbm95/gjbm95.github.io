@@ -4,7 +4,7 @@
 body{
     overflow-x: hidden;
     background-color: white;
-    font-family: 'Maven Pro', sans-serif;
+    /*font-family: 'Maven Pro', sans-serif;*/
 }
 
 .center-image{
@@ -50,4 +50,4 @@ hr{
     border-color: rgb(0, 112, 192);
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; /*font-family: Roboto, "Helvetica Neue", sans-serif;*/ }
