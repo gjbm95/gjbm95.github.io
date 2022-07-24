@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from './services/api.service';
-import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectDetailComponent } from './home/components/project-detail/project-detail.component';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -26,7 +25,6 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    HttpModule,
     HttpClientModule,
     ReactiveFormsModule,
     BrowserModule,

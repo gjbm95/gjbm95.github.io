@@ -34,6 +34,7 @@ export class ApiService {
                 return this.http.get(url);
             }catch(e){
               console.log("Error in registerProject service Home "+e);
+              return null;
             }
     }
 
@@ -48,6 +49,7 @@ export class ApiService {
             return this.http.get(url);
         }catch(e){
           console.log("Error in sendMessage service Home "+e);
+          return null;
         }
     }
 
@@ -57,6 +59,7 @@ export class ApiService {
             return this.http.get(url);
         }catch(e){
           console.log("Error in visitAlert service Home "+e);
+          return null;
         }
     }
 
