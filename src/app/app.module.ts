@@ -7,8 +7,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectDetailComponent } from './home/components/project-detail/project-detail.component';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MAT_DIALOG_SCROLL_STRATEGY } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { ScrollStrategyOptions } from '@angular/cdk/overlay';
 
 const appRoutes: Routes = [
   { path: 'inicio', component: HomeComponent },
@@ -29,10 +31,16 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     BrowserModule,
     MatDialogModule,
+    MatCardModule,
     BrowserAnimationsModule,
   ],
   providers: [
-    ApiService
+    ApiService,
+    {
+      provide: MAT_DIALOG_SCROLL_STRATEGY,
+        useFactory: (scrollStrategyOptions: ScrollStrategyOptions) => scrollStrategyOptions.noop,
+        deps: [ScrollStrategyOptions]
+    }
   ],
   bootstrap: [AppComponent]
 })

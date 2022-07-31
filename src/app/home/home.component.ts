@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
   openDialog(): void {
     this.dialog.open(ProjectDetailComponent, {
       width: '650px',
-      height: '420px'
+      height: '420px',
     });
   }
 
