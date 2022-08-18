@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   public type:FormControl = new FormControl('',[Validators.required]);
   public description:FormControl = new FormControl('',[Validators.required]);
   public date:FormControl = new FormControl('',[Validators.required]);
+  public technologyName:string = "";
 
   public messageForm!:FormGroup;
   public from:FormControl = new FormControl('',[Validators.required,Validators.email]);
@@ -57,6 +58,15 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  goStart(){
+    var element = document.getElementById("start");
+    var elementPosition = element!.offsetTop;
+    window.scrollTo({
+       top: elementPosition -100, 
+       behavior: "smooth"
+    });
+  }
+
   goAboutme(){
     var element = document.getElementById("aboutme");
     var elementPosition = element!.offsetTop;
@@ -64,6 +74,32 @@ export class HomeComponent implements OnInit {
        top: elementPosition -100, 
        behavior: "smooth"
     });
+  }
+
+  goWorks(){
+    var element = document.getElementById("works");
+    var elementPosition = element!.offsetTop;
+    window.scrollTo({
+       top: elementPosition -100, 
+       behavior: "smooth"
+    });
+  }
+
+  goContacts(){
+    var element = document.getElementById("contacts");
+    var elementPosition = element!.offsetTop;
+    window.scrollTo({
+       top: elementPosition -100, 
+       behavior: "smooth"
+    });
+  }
+
+  mouseEnter(name:string){
+    this.technologyName = name;
+  }
+
+  mouseLeave(){
+    this.technologyName = "";
   }
 
   goSandbox(){

@@ -10,6 +10,7 @@ import { ProjectDetailComponent } from './home/components/project-detail/project
 import { MatDialogModule, MAT_DIALOG_SCROLL_STRATEGY } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { ScrollStrategyOptions } from '@angular/cdk/overlay';
 
 const appRoutes: Routes = [
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
     BrowserModule,
     MatDialogModule,
     MatCardModule,
+    MatIconModule,
     BrowserAnimationsModule,
   ],
   providers: [
