@@ -1,0 +1,189 @@
+[
+	{
+		"name":"Rebranding Century 21",
+		"year":"2018",
+		"description":"Adaptación de a la nueva imagen global de la marca de Century 21 en la franquicía de Venezuela. Trabajo realizado en conjunto con <a class='link' href='https://pencilspeech.com'>PencilSpeech.</a>",
+		"technologies":[
+			{
+				"name":"HTML"
+			},
+			{
+				"name":"CSS"
+			},
+			{
+				"name":"PHP"
+			},
+		],
+		"images":[
+			{
+				"url":"../assets/img/century21.png",
+				"label":"Sitio oficial Century 21"
+			}
+		]
+	},
+	{
+		"name":"DMT Learning",
+		"year":"2018",
+		"description":"Sistema de gestión de cursos en línea. Para la empresa DMT Group.",
+		"technologies":[
+			{
+				"name":"HTML"
+			},
+			{
+				"name":"CSS"
+			},
+			{
+				"name":"Typescript"
+			},
+			{
+				"name":"Angular"
+			},
+			{
+				"name":"Java"
+			},
+			{
+				"name":"Postgres"
+			},
+		],
+		"images":[
+			{
+				"url":"../assets/img/dmt.png",
+				"label":"DMT Group"
+			}
+		]
+	},
+	{
+		"name":"On Cover APP",
+		"year":"2021",
+		"description":"Aplicación para reserva de entradas, mesas y refrigerios para eventos festivos.",
+		"technologies":[
+			{
+				"name":"HTML"
+			},
+			{
+				"name":"CSS"
+			},
+			{
+				"name":"Typescript"
+			},
+			{
+				"name":"Angular"
+			},
+			{
+				"name":"Ionic"
+			},
+			{
+				"name":"MySQL"
+			},
+			{
+				"name":"PHP"
+			},
+		],
+		"images":[
+			{
+				"url":"../assets/img/dmt.png",
+				"label":"DMT Group"
+			}
+		]
+	},
+	{
+		"name":"On Pass APP",
+		"year":"2021",
+		"description":"Aplicación para gestión de accesos y reservaciones en clubes privados.",
+		"technologies":[
+			{
+				"name":"HTML"
+			},
+			{
+				"name":"CSS"
+			},
+			{
+				"name":"Typescript"
+			},
+			{
+				"name":"Angular"
+			},
+			{
+				"name":"Ionic"
+			},
+			{
+				"name":"MySQL"
+			},
+			{
+				"name":"PHP"
+			},
+		],
+		"images":[
+			{
+				"url":"../assets/img/dmt.png",
+				"label":"DMT Group"
+			},
+			{
+				"url":"../assets/img/dmt.png",
+				"label":"DMT Group"
+			},
+			{
+				"url":"../assets/img/dmt.png",
+				"label":"DMT Group"
+			},
+			{
+				"url":"../assets/img/dmt.png",
+				"label":"DMT Group"
+			},
+			{
+				"url":"../assets/img/dmt.png",
+				"label":"DMT Group"
+			}
+		]
+	},
+	{
+		"name":"On Pass APP",
+		"year":"2021",
+		"description":"Aplicación para gestión de accesos y reservaciones en clubes privados.",
+		"technologies":[
+			{
+				"name":"HTML"
+			},
+			{
+				"name":"CSS"
+			},
+			{
+				"name":"Typescript"
+			},
+			{
+				"name":"Angular"
+			},
+			{
+				"name":"Ionic"
+			},
+			{
+				"name":"MySQL"
+			},
+			{
+				"name":"PHP"
+			},
+		],
+		"images":[
+			{
+				"url":"../assets/img/dmt.png",
+				"label":"DMT Group"
+			},
+			{
+				"url":"../assets/img/dmt.png",
+				"label":"DMT Group"
+			},
+			{
+				"url":"../assets/img/dmt.png",
+				"label":"DMT Group"
+			},
+			{
+				"url":"../assets/img/dmt.png",
+				"label":"DMT Group"
+			},
+			{
+				"url":"../assets/img/dmt.png",
+				"label":"DMT Group"
+			},
+		]
+	},
+]
