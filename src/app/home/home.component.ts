@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { Project } from '../models/project.model';
 import { ApiService } from '../services/api.service';
 import { Constants } from '../utils/contants';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
@@ -11,6 +12,8 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
 })
 export class HomeComponent implements OnInit {
 
+  //Billing Form
+  //------------------------------------------------------------------------------------------
   public billingForm!:FormGroup;
   public fullname:FormControl = new FormControl('',[Validators.required]);
   public email:FormControl = new FormControl('',[Validators.required,Validators.email]);
@@ -21,12 +24,20 @@ export class HomeComponent implements OnInit {
   public date:FormControl = new FormControl('',[Validators.required]);
   public technologyName:string = "";
 
+  //Message Form
+  //------------------------------------------------------------------------------------------
   public messageForm!:FormGroup;
   public from:FormControl = new FormControl('',[Validators.required,Validators.email]);
   public subject:FormControl = new FormControl('',[Validators.required]);
   public message:FormControl = new FormControl('',[Validators.required]);
 
+  //Utils
+  //------------------------------------------------------------------------------------------
   public age = new Date().getFullYear() - 1996;
+
+  //Lista de proyectos
+  //------------------------------------------------------------------------------------------
+  public projects:Project[]=[];
 
   constructor(public formBuilder: FormBuilder,
               public dialog: MatDialog,
@@ -35,6 +46,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getProjects();
     this.billingForm = this.formBuilder.group({
       "fullname": this.fullname,
       "email": this.email,
@@ -104,6 +116,10 @@ export class HomeComponent implements OnInit {
 
   goSandbox(){
     window.location.href = Constants.baseUrl + "sandbox";
+  }
+
+  public getProjects(){
+    this.projects = this.api.getProjects();
   }
 
   public sendRequest(){

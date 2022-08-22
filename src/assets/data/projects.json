@@ -12,7 +12,7 @@
 			},
 			{
 				"name":"PHP"
-			},
+			}
 		],
 		"images":[
 			{
@@ -43,7 +43,7 @@
 			},
 			{
 				"name":"Postgres"
-			},
+			}
 		],
 		"images":[
 			{
@@ -77,7 +77,7 @@
 			},
 			{
 				"name":"PHP"
-			},
+			}
 		],
 		"images":[
 			{
@@ -111,7 +111,7 @@
 			},
 			{
 				"name":"PHP"
-			},
+			}
 		],
 		"images":[
 			{
@@ -161,7 +161,7 @@
 			},
 			{
 				"name":"PHP"
-			},
+			}
 		],
 		"images":[
 			{
@@ -183,7 +183,7 @@
 			{
 				"url":"../assets/img/dmt.png",
 				"label":"DMT Group"
-			},
+			}
 		]
-	},
+	}
 ]

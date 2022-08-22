@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders  } from '@angular/common/http';
 import { RemoteRequest } from '../models/remoterequest.model';
+import * as projects from "../../assets/data/projects.json";
+import { Project } from '../models/project.model';
 
 @Injectable()
 export class ApiService {
@@ -63,9 +65,19 @@ export class ApiService {
         }
     }
 
-    public getProjects():any{
-
-
+    public getProjects():Project[]{
+        let projectsFile = projects as Array<any>;
+        let projectsResult:Project[] = [];
+        for(var i=0; i< projectsFile.length; i++){
+            let projectMap = new Project();
+            projectMap.name = projectsFile[i].name;
+            projectMap.description = projectsFile[i].description;
+            projectMap.year = projectsFile[i].year;
+            projectMap.technologies = projectsFile[i].technologies;
+            projectMap.images = projectsFile[i].images;
+            projectsResult.push(projectMap);
+        }
+        return projectsResult;
     }
 
 

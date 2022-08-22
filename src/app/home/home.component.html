@@ -259,67 +259,20 @@
           <div  class="col-md-12">
             <div id="carouselProjectsControls" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div *ngFor="let project of projects; index as i">
+                <div   class="carousel-item">
                   <div class="d-flex flex-row justify-content-center">
                     <div class="p-2 card">
                       <mat-card (click)="openDialog()">
-                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="DMT Group">
+                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="{{ project.name }}">
                         <mat-card-content>
-                          <mat-card-title><h5 class="card-title">Card title</h5></mat-card-title>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </mat-card-content>
-                      </mat-card> 
-                    </div>
-                    <div class="p-2 card">
-                      <mat-card (click)="openDialog()">
-                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="DMT Group">
-                        <mat-card-content>
-                          <mat-card-title><h5 class="card-title">Card title</h5></mat-card-title>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </mat-card-content>
-                      </mat-card> 
-                    </div>
-                    <div class="p-2 card">
-                      <mat-card (click)="openDialog()">
-                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="DMT Group">
-                        <mat-card-content>
-                          <mat-card-title><h5 class="card-title">Card title</h5></mat-card-title>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <mat-card-title><h5 class="card-title">{{ project.name }}</h5></mat-card-title>
+                          <p class="card-text">{{ project.description }}</p>
                         </mat-card-content>
                       </mat-card> 
                     </div>
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <div class="d-flex flex-row justify-content-center">
-                    <div class="p-2 card">
-                      <mat-card (click)="openDialog()">
-                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="DMT Group">
-                        <mat-card-content>
-                          <mat-card-title><h5 class="card-title">Card title</h5></mat-card-title>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </mat-card-content>
-                      </mat-card> 
-                    </div>
-                    <div class="p-2 card">
-                      <mat-card (click)="openDialog()">
-                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="DMT Group">
-                        <mat-card-content>
-                          <mat-card-title><h5 class="card-title">Card title</h5></mat-card-title>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </mat-card-content>
-                      </mat-card> 
-                    </div>
-                    <div class="p-2 card">
-                      <mat-card (click)="openDialog()">
-                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="DMT Group">
-                        <mat-card-content>
-                          <mat-card-title><h5 class="card-title">Card title</h5></mat-card-title>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </mat-card-content>
-                      </mat-card> 
-                    </div>
-                  </div>
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjectsControls" data-bs-slide="prev">
