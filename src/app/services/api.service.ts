@@ -63,5 +63,10 @@ export class ApiService {
         }
     }
 
+    public getProjects():any{
+
+
+    }
+
 
 }
