@@ -48,6 +48,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getProjects();
+    this.projectItems = this.getProjectIndexes();
     this.billingForm = this.formBuilder.group({
       "fullname": this.fullname,
       "email": this.email,
@@ -66,8 +67,8 @@ export class HomeComponent implements OnInit {
 
   openDialog(project:Project): void {
     this.dialog.open(ProjectDetailComponent, {
-      width: '650px',
-      height: '420px',
+      width: '750px',
+      height: '620px',
       data: project
     });
   }
@@ -121,12 +122,14 @@ export class HomeComponent implements OnInit {
   }
 
   public getProjectIndexes():number[] {
-    let length:number = this.projects.length;
-    let value:number = length / 3;
+    let length:number = this.projects.length
+    let value:number = Math.trunc(length / 3);
     let indexes:number[]=[];
     let i=0;
-    while(i<length){
-      indexes.push(i);
+    let position = 0;
+    while(i<=value){
+      indexes.push(position);
+      position = position + 3;
       i = i + value;   
     }
     return indexes;

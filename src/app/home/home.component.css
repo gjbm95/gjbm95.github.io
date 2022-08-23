@@ -103,6 +103,10 @@
   transform: scale(1.1);
 }
 
+.mat-card-custom{
+  height: 80px;
+}
+
 .contact-space{
   margin-top: 50px;
 }
