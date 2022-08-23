@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Project } from 'src/app/models/project.model';
 
 @Component({
   selector: 'app-project-detail',
@@ -9,7 +10,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class ProjectDetailComponent{
 
   constructor(
-    public dialogRef: MatDialogRef<ProjectDetailComponent>
+    public dialogRef: MatDialogRef<ProjectDetailComponent>,
+    @Inject(MAT_DIALOG_DATA) public project: Project
   ) { }
 
   ngOnInit() {

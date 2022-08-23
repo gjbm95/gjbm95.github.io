@@ -11,6 +11,7 @@ import { MatDialogModule, MAT_DIALOG_SCROLL_STRATEGY } from '@angular/material/d
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
 import { ScrollStrategyOptions } from '@angular/cdk/overlay';
 
 const appRoutes: Routes = [
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
     MatDialogModule,
     MatCardModule,
     MatIconModule,
+    MatChipsModule,
     BrowserAnimationsModule,
   ],
   providers: [

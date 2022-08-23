@@ -259,20 +259,38 @@
           <div  class="col-md-12">
             <div id="carouselProjectsControls" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
-                <div *ngFor="let project of projects; index as i">
-                <div   class="carousel-item">
-                  <div class="d-flex flex-row justify-content-center">
-                    <div class="p-2 card">
-                      <mat-card (click)="openDialog()">
-                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="{{ project.name }}">
-                        <mat-card-content>
-                          <mat-card-title><h5 class="card-title">{{ project.name }}</h5></mat-card-title>
-                          <p class="card-text">{{ project.description }}</p>
-                        </mat-card-content>
-                      </mat-card> 
+                <div *ngFor="let i of getProjectIndexes()">
+                  <div class="carousel-item">
+                    <div class="d-flex flex-row justify-content-center">
+                      <div *ngIf="projects[i]!=null" class="p-2 card">
+                        <mat-card (click)="openDialog(project)">
+                          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="{{ projects[i]?.name }}">
+                          <mat-card-content>
+                            <mat-card-title><h5 class="card-title">{{ projects[i]?.name }}</h5></mat-card-title>
+                            <p class="card-text">{{ projects[i]?.description }}</p>
+                          </mat-card-content>
+                        </mat-card> 
+                      </div>
+                      <div *ngIf="projects[i+1]!=null" class="p-2 card">
+                        <mat-card (click)="openDialog(project)">
+                          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="{{ projects[i+1].name }}">
+                          <mat-card-content>
+                            <mat-card-title><h5 class="card-title">{{ projects[i+1].name }}</h5></mat-card-title>
+                            <p class="card-text">{{ projects[i+1].description }}</p>
+                          </mat-card-content>
+                        </mat-card> 
+                      </div>
+                      <div *ngIf="projects[i+2]!=null" class="p-2 card">
+                        <mat-card (click)="openDialog(project)">
+                          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="{{ projects[i+2].name }}">
+                          <mat-card-content>
+                            <mat-card-title><h5 class="card-title">{{ projects[i+2].name }}</h5></mat-card-title>
+                            <p class="card-text">{{ projects[i+2].description }}</p>
+                          </mat-card-content>
+                        </mat-card> 
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjectsControls" data-bs-slide="prev">

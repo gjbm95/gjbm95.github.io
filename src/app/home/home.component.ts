@@ -38,6 +38,7 @@ export class HomeComponent implements OnInit {
   //Lista de proyectos
   //------------------------------------------------------------------------------------------
   public projects:Project[]=[];
+  public projectItems:number[]=[];
 
   constructor(public formBuilder: FormBuilder,
               public dialog: MatDialog,
@@ -63,10 +64,11 @@ export class HomeComponent implements OnInit {
   }); 
   }
 
-  openDialog(): void {
+  openDialog(project:Project): void {
     this.dialog.open(ProjectDetailComponent, {
       width: '650px',
       height: '420px',
+      data: project
     });
   }
 
@@ -116,6 +118,18 @@ export class HomeComponent implements OnInit {
 
   goSandbox(){
     window.location.href = Constants.baseUrl + "sandbox";
+  }
+
+  public getProjectIndexes():number[] {
+    let length:number = this.projects.length;
+    let value:number = length / 3;
+    let indexes:number[]=[];
+    let i=0;
+    while(i<length){
+      indexes.push(i);
+      i = i + value;   
+    }
+    return indexes;
   }
 
   public getProjects(){

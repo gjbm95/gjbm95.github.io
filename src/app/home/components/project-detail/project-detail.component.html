@@ -1,4 +1,35 @@
-<h1 mat-dialog-title>Prueba</h1>
+<h1 mat-dialog-title>{{ project?.name }}</h1>
 <div mat-dialog-content>
-  Prueba
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{{ project?.images[0]?.url }}" alt="{{ project?.images[0]?.label }}" width="120" height="100">
+    </div>
+    <div class="col-md-8">
+      <p>
+        <b>Descripción del proyecto</b><br>
+        {{ project?.description}}<br>
+        <b>Año: </b> {{ project?.year}}<br>
+        <b>Tecnologías aplicadas:</b><br>
+        <mat-chip-list class="mat-chip-list-stacked">
+          <mat-chip *ngFor="let technology of project?.technologies">
+            {{ technology?.name }}
+          </mat-chip>
+        </mat-chip-list>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <img *ngIf="project?.images[0]!=null" src="{{ project?.images[0]?.url }}" alt="{{ project?.images[0]?.label }}" width="30" height="30">
+    </div>
+    <div class="col-md-3">
+      <img *ngIf="project?.images[1]!=null" src="{{ project?.images[1]?.url }}" alt="{{ project?.images[1]?.label }}" width="30" height="30">
+    </div>
+    <div class="col-md-3">
+      <img *ngIf="project?.images[2]!=null" src="{{ project?.images[2]?.url }}" alt="{{ project?.images[2]?.label }}" width="30" height="30">
+    </div>
+    <div class="col-md-3">
+      <img *ngIf="project?.images[3]!=null" src="{{ project?.images[3]?.url }}" alt="{{ project?.images[3]?.label }}" width="30" height="30">
+    </div>
+  </div>
 </div>
