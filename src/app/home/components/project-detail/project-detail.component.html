@@ -1,35 +1,39 @@
-<h1 mat-dialog-title>{{ project?.name }}</h1>
+<h1 mat-dialog-title>{{ project.name }}</h1>
 <div mat-dialog-content>
   <div class="row">
     <div class="col-md-4">
-      <img src="{{ project?.images[0]?.url }}" alt="{{ project?.images[0]?.label }}" width="120" height="100">
+      <img src="{{ currentImage }}" alt="{{ currentLabel }}" width="220" height="160">
     </div>
     <div class="col-md-8">
       <p>
         <b>Descripción del proyecto</b><br>
-        {{ project?.description}}<br>
-        <b>Año: </b> {{ project?.year}}<br>
-        <b>Tecnologías aplicadas:</b><br>
-        <mat-chip-list class="mat-chip-list-stacked">
-          <mat-chip *ngFor="let technology of project?.technologies">
-            {{ technology?.name }}
-          </mat-chip>
-        </mat-chip-list>
+        {{ project.description}}<br><br>
       </p>
+      <p>
+        <b>Año: </b> {{ project.year}}<br>
+      </p>
+      <div><b>Tecnologías aplicadas:</b><br></div><br>
+      <mat-chip-list>
+        <mat-chip *ngFor="let technology of project?.technologies">
+          {{ technology?.name }}
+        </mat-chip>
+      </mat-chip-list>
     </div>
   </div>
+  <br>
+  <br>
   <div class="row">
     <div class="col-md-3">
-      <img *ngIf="project?.images[0]!=null" src="{{ project?.images[0]?.url }}" alt="{{ project?.images[0]?.label }}" width="30" height="30">
+      <img class="image-selector" *ngIf="project.images[0]!=null" (click)="selectImage(project.images[0]?.url,project.images[0]?.label)" src="{{ project.images[0]?.url }}" alt="{{ project.images[0]?.label }}" width="130" height="130">
     </div>
     <div class="col-md-3">
-      <img *ngIf="project?.images[1]!=null" src="{{ project?.images[1]?.url }}" alt="{{ project?.images[1]?.label }}" width="30" height="30">
+      <img class="image-selector" *ngIf="project.images[1]!=null" (click)="selectImage(project.images[1]?.url,project.images[1]?.label)" src="{{ project.images[1]?.url }}" alt="{{ project.images[1]?.label }}" width="130" height="130">
     </div>
     <div class="col-md-3">
-      <img *ngIf="project?.images[2]!=null" src="{{ project?.images[2]?.url }}" alt="{{ project?.images[2]?.label }}" width="30" height="30">
+      <img class="image-selector" *ngIf="project.images[2]!=null" (click)="selectImage(project.images[2]?.url,project.images[2]?.label)" src="{{ project.images[2]?.url }}" alt="{{ project.images[2]?.label }}" width="130" height="130">
     </div>
     <div class="col-md-3">
-      <img *ngIf="project?.images[3]!=null" src="{{ project?.images[3]?.url }}" alt="{{ project?.images[3]?.label }}" width="30" height="30">
+      <img class="image-selector" *ngIf="project.images[3]!=null" (click)="selectImage(project.images[3]?.url,project.images[3]?.label)" src="{{ project.images[3]?.url }}" alt="{{ project.images[3]?.label }}" width="130" height="130">
     </div>
   </div>
 </div>

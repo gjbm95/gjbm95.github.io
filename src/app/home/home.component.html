@@ -256,42 +256,40 @@
             </div>
         </div>
         <div class="row">
-          <div  class="col-md-12">
+          <div class="col-md-12">
             <div id="carouselProjectsControls" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
-                <div *ngFor="let i of getProjectIndexes()">
-                  <div class="carousel-item">
+                  <div *ngFor="let i of projectItems" class="carousel-item" [className]="(i==0)?'carousel-item active':'carousel-item'">
                     <div class="d-flex flex-row justify-content-center">
                       <div *ngIf="projects[i]!=null" class="p-2 card">
-                        <mat-card (click)="openDialog(project)">
-                          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="{{ projects[i]?.name }}">
-                          <mat-card-content>
-                            <mat-card-title><h5 class="card-title">{{ projects[i]?.name }}</h5></mat-card-title>
-                            <p class="card-text">{{ projects[i]?.description }}</p>
+                        <mat-card (click)="openDialog(projects[i])">
+                          <img mat-card-image src="{{ projects[i].images[0]?.url }}" height="170" alt="{{ projects[i].name }}">
+                          <mat-card-content class="mat-card-custom">
+                            <mat-card-title><h5 class="card-title">{{ projects[i].name }}</h5></mat-card-title>
+                            <p class="card-text">{{ projects[i].description.slice(0,65) }}...</p>
                           </mat-card-content>
                         </mat-card> 
                       </div>
                       <div *ngIf="projects[i+1]!=null" class="p-2 card">
-                        <mat-card (click)="openDialog(project)">
-                          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="{{ projects[i+1].name }}">
-                          <mat-card-content>
+                        <mat-card (click)="openDialog(projects[i+1])">
+                          <img mat-card-image src="{{ projects[i+1].images[0]?.url }}" height="170" alt="{{ projects[i+1].name }}">
+                          <mat-card-content class="mat-card-custom">
                             <mat-card-title><h5 class="card-title">{{ projects[i+1].name }}</h5></mat-card-title>
-                            <p class="card-text">{{ projects[i+1].description }}</p>
+                            <p class="card-text">{{ projects[i+1].description.slice(0,65) }}...</p>
                           </mat-card-content>
                         </mat-card> 
                       </div>
                       <div *ngIf="projects[i+2]!=null" class="p-2 card">
-                        <mat-card (click)="openDialog(project)">
-                          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="{{ projects[i+2].name }}">
-                          <mat-card-content>
+                        <mat-card (click)="openDialog(projects[i+2])">
+                          <img mat-card-image src="{{ projects[i+2].images[0]?.url }}" height="170" alt="{{ projects[i+2].name }}">
+                          <mat-card-content class="mat-card-custom">
                             <mat-card-title><h5 class="card-title">{{ projects[i+2].name }}</h5></mat-card-title>
-                            <p class="card-text">{{ projects[i+2].description }}</p>
+                            <p class="card-text">{{ projects[i+2].description.slice(0,65) }}...</p>
                           </mat-card-content>
                         </mat-card> 
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjectsControls" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
