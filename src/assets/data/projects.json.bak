@@ -16,7 +16,7 @@
 		],
 		"images":[
 			{
-				"url":"../assets/img/projects/century21.png",
+				"url":"../assets/img/century21.png",
 				"label":"Sitio oficial Century 21"
 			}
 		]
@@ -47,7 +47,7 @@
 		],
 		"images":[
 			{
-				"url":"../assets/img/projects/dmt.png",
+				"url":"../assets/img/dmt.png",
 				"label":"DMT Group"
 			}
 		]
@@ -81,23 +81,23 @@
 		],
 		"images":[
 			{
-				"url":"../assets/img/projects/on-cover-1.jpg",
+				"url":"../assets/img/projects/on-cover-1.png",
 				"label":"On Cover"
 			},
 			{
-				"url":"../assets/img/projects/on-cover-2.jpg",
+				"url":"../assets/img/projects/on-cover-2.png",
 				"label":"On Cover"
 			},
 			{
-				"url":"../assets/img/projects/on-cover-3.jpg",
+				"url":"../assets/img/projects/on-cover-3.png",
 				"label":"On Cover"
 			},
 			{
-				"url":"../assets/img/projects/on-cover-4.jpg",
+				"url":"../assets/img/projects/on-cover-4.png",
 				"label":"On Cover"
 			},
 			{
-				"url":"../assets/img/projects/on-cover-5.jpg",
+				"url":"../assets/img/projects/on-cover-5.png",
 				"label":"On Cover"
 			}
 		]
