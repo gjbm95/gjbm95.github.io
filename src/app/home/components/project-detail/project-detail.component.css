@@ -4,4 +4,9 @@
 
 .image-selector{
     cursor:pointer;
+    margin:5px;
+}
+
+.project-main-image{
+    margin: 5px;
 }

@@ -221,14 +221,14 @@
                   </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselSkillsControls" data-bs-slide="prev">
+<!--               <button class="carousel-control-prev" type="button" data-bs-target="#carouselSkillsControls" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
               <button class="carousel-control-next" type="button" data-bs-target="#carouselSkillsControls" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-              </button>
+              </button> -->
             </div>
 
           </div>
@@ -260,7 +260,7 @@
             <div id="carouselProjectsControls" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                   <div *ngFor="let i of projectItems" class="carousel-item" [className]="(i==0)?'carousel-item active':'carousel-item'">
-                    <div class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-wrap justify-content-center">
                       <div *ngIf="projects[i]!=null" class="p-2 card">
                         <mat-card (click)="openDialog(projects[i])">
                           <img mat-card-image src="{{ projects[i].images[0]?.url }}" height="170" alt="{{ projects[i].name }}">
@@ -291,14 +291,14 @@
                     </div>
                   </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjectsControls" data-bs-slide="prev">
+<!--               <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjectsControls" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
               <button class="carousel-control-next" type="button" data-bs-target="#carouselProjectsControls" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-              </button>
+              </button> -->
             </div>
           </div>
       </div>
