@@ -123,3 +123,14 @@
 .mat-icon {
   vertical-align: middle;
 }
+  
+.image-author{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+p{
+  text-align: justify;
+  text-justify: inter-word;
+}
