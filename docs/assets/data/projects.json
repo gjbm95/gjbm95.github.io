@@ -1,0 +1,167 @@
+[
+	{
+		"name":"On Pass APP",
+		"year":"2021",
+		"description":"Aplicación para gestión de accesos y reservaciones en clubes privados.",
+		"technologies":[
+			{
+				"name":"HTML"
+			},
+			{
+				"name":"CSS"
+			},
+			{
+				"name":"Typescript"
+			},
+			{
+				"name":"Angular"
+			},
+			{
+				"name":"Ionic"
+			},
+			{
+				"name":"MySQL"
+			},
+			{
+				"name":"PHP"
+			}
+		],
+		"urls":[
+				{
+					"title":"Google Play",
+					"url":"https://play.google.com/store/apps/details?id=com.onpass.app&hl=es_EC&gl=US&pli=1"
+				},
+				{
+					"title":"App Store",
+					"url":"https://apps.apple.com/pa/app/on-pass/id1524534482"
+				}
+		],
+		"images":[
+			{
+				"url":"../assets/img/projects/on-pass-3.png",
+				"label":"On Pass"
+			},
+			{
+				"url":"../assets/img/projects/on-pass-2.png",
+				"label":"On Pass"
+			},
+			{
+				"url":"../assets/img/projects/on-pass-4.png",
+				"label":"On Pass"
+			},
+			{
+				"url":"../assets/img/projects/on-pass-5.png",
+				"label":"On Pass"
+			}
+		]
+	},
+	{
+		"name":"On Cover APP",
+		"year":"2021",
+		"description":"Aplicación para reserva de entradas, mesas y refrigerios para eventos festivos.",
+		"technologies":[
+			{
+				"name":"HTML"
+			},
+			{
+				"name":"CSS"
+			},
+			{
+				"name":"Typescript"
+			},
+			{
+				"name":"Angular"
+			},
+			{
+				"name":"Ionic"
+			},
+			{
+				"name":"MySQL"
+			},
+			{
+				"name":"PHP"
+			}
+		],
+		"images":[
+			{
+				"url":"../assets/img/projects/on-cover-1.jpg",
+				"label":"On Cover"
+			},
+			{
+				"url":"../assets/img/projects/on-cover-2.jpg",
+				"label":"On Cover"
+			},
+			{
+				"url":"../assets/img/projects/on-cover-3.jpg",
+				"label":"On Cover"
+			},
+			{
+				"url":"../assets/img/projects/on-cover-4.jpg",
+				"label":"On Cover"
+			},
+			{
+				"url":"../assets/img/projects/on-cover-5.jpg",
+				"label":"On Cover"
+			}
+		]
+	},
+	{
+		"name":"Rebranding Century 21",
+		"year":"2018",
+		"description":"Adaptación de a la nueva imagen global de la marca de Century 21 en la franquicía de Venezuela. Trabajo realizado en conjunto con PencilSpeech.",
+		"urls":[
+			{
+				"title":"Pencil Speech",
+				"url":"https://pencilspeech.com/en/"
+			}
+		],
+		"technologies":[
+			{
+				"name":"HTML"
+			},
+			{
+				"name":"CSS"
+			},
+			{
+				"name":"PHP"
+			}
+		],
+		"images":[
+			{
+				"url":"../assets/img/projects/century21.png",
+				"label":"Sitio oficial Century 21"
+			}
+		]
+	},
+	{
+		"name":"DMT Learning",
+		"year":"2018",
+		"description":"Sistema de gestión de cursos en línea. Para la empresa DMT Group.",
+		"technologies":[
+			{
+				"name":"HTML"
+			},
+			{
+				"name":"CSS"
+			},
+			{
+				"name":"Typescript"
+			},
+			{
+				"name":"Angular"
+			},
+			{
+				"name":"Java"
+			},
+			{
+				"name":"Postgres"
+			}
+		],
+		"images":[
+			{
+				"url":"../assets/img/projects/dmt.png",
+				"label":"DMT Group"
+			}
+		]
+	}
+]
