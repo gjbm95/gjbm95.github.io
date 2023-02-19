@@ -12,8 +12,6 @@ export class ApiService {
     public request: RemoteRequest = new RemoteRequest();
     public host:string = "https://garrybruno.com.ve"; 
     public cors:string = "https://cors-anywhere.herokuapp.com/"; 
-    private SENDGRID_API_KEY:string='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';
-
 
     constructor(public http:HttpClient) {
         this.headers = new Headers({
