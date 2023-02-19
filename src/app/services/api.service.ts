@@ -72,6 +72,7 @@ export class ApiService {
             let projectMap = new Project();
             projectMap.name = projectsFile[i].name;
             projectMap.description = projectsFile[i].description;
+            projectMap.urls = projectsFile[i].urls;
             projectMap.year = projectsFile[i].year;
             projectMap.technologies = projectsFile[i].technologies;
             projectMap.images = projectsFile[i].images;

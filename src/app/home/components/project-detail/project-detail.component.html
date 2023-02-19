@@ -7,9 +7,15 @@
     <div class="col-md-1"></div>
     <div class="col-md-7">
       <p>
-        <b>Descripción del proyecto</b><br>
-        {{ project.description}}<br><br>
+        <b>Descripción del proyecto:</b><br>
+        {{ project.description }}<br>
       </p>
+      <div *ngIf="project.urls!=undefined">
+        <b>Enlaces de interés:</b><br>
+        <ul>
+          <li *ngFor="let url of project?.urls"><a href="{{url?.url}}">{{url?.title}}</a></li>
+        </ul> 
+      </div>
       <p>
         <b>Año: </b> {{ project.year}}<br>
       </p>
