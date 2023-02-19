@@ -328,12 +328,10 @@
         <div class="row contact-space">
           <div class="col-md-6">
             <h5>Redes sociales</h5><br>
-            <a href="https://www.linkedin.com/in/garryjrbruno/"><img width="60" height="60" src="../assets/img/linkedin-icon.png"></a><br><br>
+            <a target="_blank" href="https://www.linkedin.com/in/garryjrbruno/"><img width="60" height="60" src="../assets/img/linkedin-icon.png"></a><br><br>
             <h5>Correo electrónico</h5><br>
-            - proyectos@garrybruno.com.ve<br>
             - garry387@gmail.com<br>
             <br>
-            <a href=""><h5>Descarga mi curriculum <mat-icon class="margin-icon">cloud_download</mat-icon></h5></a>
           </div>
           <div class="col-md-6">
             <h5>Envía un mensaje</h5><br>
@@ -358,6 +356,18 @@
                 <br>
                 <button (click)="sendMessage()" type="submit" class="btn btn-primary">Enviar mensaje</button>
                 <br>
+              </div>
+              <div *ngIf="wasSent">
+                <br>
+                <div class="alert alert-info" role="alert">
+                  El mensaje ha sido enviado con exito.
+                </div>
+              </div>
+              <div *ngIf="loadingEmail">
+                <br>
+                <div class="alert alert-primary" role="alert">
+                  Enviando...
+                </div>
               </div>
           </div>
        </div>

@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>{{ project.name }}</h1>
+<h1 mat-dialog-title><b>{{ project.name }}</b></h1>
 <div mat-dialog-content>
   <div class="row">
     <div class="col-md-4">
@@ -13,7 +13,7 @@
       <div *ngIf="project.urls!=undefined">
         <b>Enlaces de interés:</b><br>
         <ul>
-          <li *ngFor="let url of project?.urls"><a href="{{url?.url}}">{{url?.title}}</a></li>
+          <li *ngFor="let url of project?.urls"><a target="_blank" href="{{url?.url}}">{{url?.title}}</a></li>
         </ul> 
       </div>
       <p>
