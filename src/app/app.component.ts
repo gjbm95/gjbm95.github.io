@@ -12,7 +12,8 @@ export class AppComponent {
   public year = new Date().getFullYear();
   public isLoading: boolean = true;
 
-  ngAfterViewInit() {
+
+  ngOnInit() {
    document.onreadystatechange = () => {
       if (document.readyState === 'complete') {
         // document ready
