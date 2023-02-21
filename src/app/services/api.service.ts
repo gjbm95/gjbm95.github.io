@@ -11,7 +11,6 @@ export class ApiService {
     public headersClient:HttpHeaders= new HttpHeaders({ 'Content-Type': 'application/json' })  
     public request: RemoteRequest = new RemoteRequest();
     public host:string = "https://garrybruno.com.ve"; 
-    public cors:string = "https://cors-anywhere.herokuapp.com/"; 
 
     constructor(public http:HttpClient) {
         this.headers = new Headers({

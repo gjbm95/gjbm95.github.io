@@ -7,9 +7,14 @@ import { Constants } from './utils/contants';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  headerOffset = 100;
-  year = new Date().getFullYear();
+  public title = 'app';
+  public headerOffset = 100;
+  public year = new Date().getFullYear();
+  public isLoading: boolean = true;
+
+  ngAfterViewInit() {
+   this.isLoading = false;
+ }
 
   goHome(){
     var element = document.getElementById("home");

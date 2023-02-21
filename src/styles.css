@@ -54,3 +54,14 @@ a{
     color: rgb(0, 112, 192);
     cursor:pointer;
 }
+
+.icon-logo{
+    animation: move-logo 1.2s infinite;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes move-logo {
+    from { scale:1 }
+    to { scale:1.5}
+  }
+  

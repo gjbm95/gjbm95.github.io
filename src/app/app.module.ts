@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ScrollStrategyOptions } from '@angular/cdk/overlay';
 
 const appRoutes: Routes = [
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
     MatCardModule,
     MatIconModule,
     MatChipsModule,
+    MatProgressSpinnerModule,
     BrowserAnimationsModule,
   ],
   providers: [
