@@ -13,7 +13,13 @@ export class AppComponent {
   public isLoading: boolean = true;
 
   ngAfterViewInit() {
-   this.isLoading = false;
+   document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        // document ready
+        this.isLoading = false;
+      }
+    };
+   
  }
 
   goHome(){
