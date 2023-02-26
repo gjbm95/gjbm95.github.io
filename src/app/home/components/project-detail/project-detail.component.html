@@ -2,7 +2,7 @@
 <div mat-dialog-content>
   <div class="row">
     <div class="col-md-4">
-      <img class="center-image" src="{{ currentImage }}" alt="{{ currentLabel }}" width="200" height="160">
+      <img class="center-image" loading="lazy" src="{{ currentImage }}" alt="{{ currentLabel }}" width="200" height="160">
     </div>
     <div class="col-md-1"></div>
     <div class="col-md-7">
@@ -31,16 +31,16 @@
   <br>
   <div class="d-flex flex-wrap justify-content-center">  
     <div class="d-md-flex">
-      <img class="image-selector" *ngIf="project.images[0]!=null" (click)="selectImage(project.images[0]?.url,project.images[0]?.label)" src="{{ project.images[0]?.url }}" alt="{{ project.images[0]?.label }}" width="130" height="130">
+      <img class="image-selector" loading="lazy" *ngIf="project.images[0]!=null" (click)="selectImage(project.images[0]?.url,project.images[0]?.label)" src="{{ project.images[0]?.url }}" alt="{{ project.images[0]?.label }}" width="130" height="130">
     </div>
     <div class="d-md-flex">
-      <img class="image-selector" *ngIf="project.images[1]!=null" (click)="selectImage(project.images[1]?.url,project.images[1]?.label)" src="{{ project.images[1]?.url }}" alt="{{ project.images[1]?.label }}" width="130" height="130">
+      <img class="image-selector" loading="lazy" *ngIf="project.images[1]!=null" (click)="selectImage(project.images[1]?.url,project.images[1]?.label)" src="{{ project.images[1]?.url }}" alt="{{ project.images[1]?.label }}" width="130" height="130">
     </div>
     <div class="d-md-flex">
-      <img class="image-selector" *ngIf="project.images[2]!=null" (click)="selectImage(project.images[2]?.url,project.images[2]?.label)" src="{{ project.images[2]?.url }}" alt="{{ project.images[2]?.label }}" width="130" height="130">
+      <img class="image-selector" loading="lazy" *ngIf="project.images[2]!=null" (click)="selectImage(project.images[2]?.url,project.images[2]?.label)" src="{{ project.images[2]?.url }}" alt="{{ project.images[2]?.label }}" width="130" height="130">
     </div>
     <div class="d-md-flex">
-      <img class="image-selector" *ngIf="project.images[3]!=null" (click)="selectImage(project.images[3]?.url,project.images[3]?.label)" src="{{ project.images[3]?.url }}" alt="{{ project.images[3]?.label }}" width="130" height="130">
+      <img class="image-selector" loading="lazy" *ngIf="project.images[3]!=null" (click)="selectImage(project.images[3]?.url,project.images[3]?.label)" src="{{ project.images[3]?.url }}" alt="{{ project.images[3]?.label }}" width="130" height="130">
     </div>
   </div>
 </div>
