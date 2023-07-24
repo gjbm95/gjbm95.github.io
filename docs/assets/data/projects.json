@@ -163,5 +163,36 @@
 				"label":"DMT Group"
 			}
 		]
+	},
+	{
+		"name":"Modas Timay Fashion C.A.",
+		"year":"2023",
+		"description":"Sitio web para empresa de confeccion de uniformes escolares, corporativos y médicos.",
+		"urls":[
+			{
+				"title":"Modas Timay",
+				"url":"https://modastimay.com.ve"
+			}
+		],
+		"technologies":[
+			{
+				"name":"HTML"
+			},
+			{
+				"name":"CSS"
+			},
+			{
+				"name":"Typescript"
+			},
+			{
+				"name":"Angular"
+			}
+		],
+		"images":[
+			{
+				"url":"../assets/img/projects/modas-timat.png",
+				"label":"Modas Timay"
+			}
+		]
 	}
 ]
