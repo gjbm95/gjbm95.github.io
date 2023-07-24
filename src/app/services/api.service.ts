@@ -11,8 +11,6 @@ export class ApiService {
     public headersClient:HttpHeaders= new HttpHeaders({ 'Content-Type': 'application/json' })  
     public request: RemoteRequest = new RemoteRequest();
     public host:string = "https://garrybruno.com.ve"; 
-    public cors:string = "https://cors-anywhere.herokuapp.com/"; 
-
 
     constructor(public http:HttpClient) {
         this.headers = new Headers({
@@ -42,13 +40,18 @@ export class ApiService {
 
     public sendMessage(form:any){
         try{
-            let param = {
-                subject : form.get('subject').value,
-                email : form.get('from').value,
-                message : form.get('message').value
+            const headers = { 
+            };
+            const email = "garry387@gmail.com";
+            const body = {
+                "email": email,
+                "_replyto": form.get('from').value,
+                "_subject": form.get('subject').value,
+                "message": form.get('message').value,
+
             }
-            let url = this.host +"/scripts/send_message.php?data="+JSON.stringify(param);
-            return this.http.get(url);
+            let url = "https://mailthis.to/"+email;
+            return this.http.post(url,body,{ headers });
         }catch(e){
           console.log("Error in sendMessage service Home "+e);
           return null;
@@ -72,6 +75,7 @@ export class ApiService {
             let projectMap = new Project();
             projectMap.name = projectsFile[i].name;
             projectMap.description = projectsFile[i].description;
+            projectMap.urls = projectsFile[i].urls;
             projectMap.year = projectsFile[i].year;
             projectMap.technologies = projectsFile[i].technologies;
             projectMap.images = projectsFile[i].images;

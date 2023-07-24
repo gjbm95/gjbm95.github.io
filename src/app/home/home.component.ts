@@ -34,6 +34,8 @@ export class HomeComponent implements OnInit {
   //Utils
   //------------------------------------------------------------------------------------------
   public age = new Date().getFullYear() - 1996;
+  public wasSent: boolean = false;
+  public loadingEmail: boolean = false;
 
   //Lista de proyectos
   //------------------------------------------------------------------------------------------
@@ -49,20 +51,18 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.getProjects();
     this.projectItems = this.getProjectIndexes();
-    this.billingForm = this.formBuilder.group({
-      "fullname": this.fullname,
-      "email": this.email,
-      "phone":this.phone,
-      "country":this.country,
-      "type":this.type,
-      "description":this.description,
-      "date":this.date
-  });
-  this.messageForm = this.formBuilder.group({
-      "from":this.from,
-      "subject":this.subject,
-      "message":this.message
-  }); 
+    this.messageForm = this.formBuilder.group({
+        "from":this.from,
+        "subject":this.subject,
+        "message":this.message
+    }); 
+    this.onChanges();
+  }
+
+  onChanges(): void {
+    this.messageForm.get('from')!.valueChanges.subscribe(val => {
+      this.wasSent = false;
+    });
   }
 
   openDialog(project:Project): void {
@@ -159,15 +159,13 @@ export class HomeComponent implements OnInit {
 
   public sendMessage(){
       if(this.messageForm.valid){
+        this.wasSent = false;
+        this.loadingEmail = true;
         this.api.sendMessage(this.messageForm)?.subscribe(
           val => {},
           response => {
-            let result= response.text();
-            if (result == 'Envio satisfactorio'){
-               alert("¡Se ha enviado su solicitud con éxito!");
-            }else{
-               alert("¡Hubo un error durante el envío de los datos!");
-            }
+               this.loadingEmail = false;
+               this.wasSent = true;
           }
       );
     }

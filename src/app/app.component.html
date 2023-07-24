@@ -1,19 +1,35 @@
-<router-outlet></router-outlet>
-<footer class="row">
-    <div class="col-md-12">
-        <div class="container">
-            <div class="row">
-                 <div class="col-md-11">
-                     <br>
-                     <img width="50" height="50" src="../assets/img/logo.png">
-                     <br>
-                     <br>   
-                     <small>Desarrollado por: Garry Jr. Bruno</small>
-                     <br>
-                     <small>Todos los derechos reservados - {{ this.year }} ©</small><br>
-                     <small>Caracas - Venezuela</small>
-                 </div>
+<div *ngIf="!isLoading">
+    <router-outlet></router-outlet>
+    <footer class="row">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-11">
+                        <br>
+                        <img width="50" height="50" src="../assets/img/logo.png">
+                        <br>
+                        <br>   
+                        <small>Desarrollado por: Garry Jr. Bruno</small>
+                        <br>
+                        <small>Todos los derechos reservados - {{ this.year }} ©</small><br>
+                        <small>Caracas - Venezuela</small>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-</footer>
+    </footer>
+</div>
+<div class="loading-screen" *ngIf="isLoading">
+    <div class="wrapper center">
+        
+        <div class="inner">
+            <div >
+                <img class="center-image icon-logo" width="50" height="50" src="../assets/img/logo.png">
+                <br>
+                <br>
+            </div>
+            <div class="row">
+                <mat-spinner tyle="margin:0 auto;" diameter=30 color="accent" mode="indeterminate" class="custom-spinner"></mat-spinner>&nbsp;&nbsp;Cargando...
+            </div>
+    </div>
+</div>
