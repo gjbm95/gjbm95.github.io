@@ -1,5 +1,36 @@
 [
 	{
+		"name":"Modas Timay Fashion C.A.",
+		"year":"2023",
+		"description":"Sitio web para empresa de confeccion de uniformes escolares, corporativos y médicos.",
+		"urls":[
+			{
+				"title":"Modas Timay",
+				"url":"https://modastimay.com.ve"
+			}
+		],
+		"technologies":[
+			{
+				"name":"HTML"
+			},
+			{
+				"name":"CSS"
+			},
+			{
+				"name":"Typescript"
+			},
+			{
+				"name":"Angular"
+			}
+		],
+		"images":[
+			{
+				"url":"../assets/img/projects/modas-timay.png",
+				"label":"Modas Timay"
+			}
+		]
+	},
+	{
 		"name":"On Pass APP",
 		"year":"2021",
 		"description":"Aplicación para gestión de accesos y reservaciones en clubes privados.",
@@ -161,37 +192,6 @@
 			{
 				"url":"../assets/img/projects/dmt.png",
 				"label":"DMT Group"
-			}
-		]
-	},
-	{
-		"name":"Modas Timay Fashion C.A.",
-		"year":"2023",
-		"description":"Sitio web para empresa de confeccion de uniformes escolares, corporativos y médicos.",
-		"urls":[
-			{
-				"title":"Modas Timay",
-				"url":"https://modastimay.com.ve"
-			}
-		],
-		"technologies":[
-			{
-				"name":"HTML"
-			},
-			{
-				"name":"CSS"
-			},
-			{
-				"name":"Typescript"
-			},
-			{
-				"name":"Angular"
-			}
-		],
-		"images":[
-			{
-				"url":"../assets/img/projects/modas-timay.png",
-				"label":"Modas Timay"
 			}
 		]
 	}
