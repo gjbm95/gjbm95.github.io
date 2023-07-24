@@ -151,5 +151,30 @@
 				"label":"On Pass"
 			}
 		]
+	},
+	{
+		"name":"Modas Timay Fashion ",
+		"year":"2023",
+		"description":"Pagina web de una empresa de confección de uniformes.",
+		"technologies":[
+			{
+				"name":"HTML"
+			},
+			{
+				"name":"CSS"
+			},
+			{
+				"name":"Typescript"
+			},
+			{
+				"name":"Angular"
+			}
+		],
+		"images":[
+			{
+				"url":"../assets/img/projects/modas-timay.png",
+				"label":"Pagina web"
+			}
+		]
 	}
 ]
