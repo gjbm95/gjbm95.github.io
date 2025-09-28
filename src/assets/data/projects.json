@@ -1,4 +1,51 @@
 [
+  {
+    "name":"OpenCasher",
+    "year":"2025",
+    "description":"Plataforma gratuita para la gestión administrativa de negocios. Permitiendo el registro de ventas, compras, inventario, clientes y proveedores",
+    "urls":[
+      {
+        "title":"OpenCasher",
+        "url":"https://opencasher.com"
+      }
+    ],
+    "technologies":[
+      {
+        "name":"Java"
+      },
+      {
+        "name":"SpringBoot"
+      },
+      {
+        "name":"Redis"
+      },
+      {
+        "name":"MongoDB"
+      },
+      {
+        "name":"HTML"
+      },
+      {
+        "name":"CSS"
+      },
+      {
+        "name":"Typescript"
+      },
+      {
+        "name":"Angular"
+      }
+    ],
+    "images":[
+      {
+        "url":"../assets/img/projects/vista_1.png",
+        "label":"OpenCasher"
+      },
+      {
+        "url":"../assets/img/projects/vista_2.png",
+        "label":"OpenCasher"
+      }
+    ]
+  },
 	{
 		"name":"Modas Timay",
 		"year":"2023",
