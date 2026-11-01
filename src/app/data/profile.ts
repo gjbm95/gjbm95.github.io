@@ -5,7 +5,7 @@ export const PROFILE = {
   role: 'Desarrollador de software',
   location: 'Caracas, Venezuela',
   email: 'proyectos@garrybruno.com.ve',
-  birthYear: 1996,
+  birthYear: 1995,
   photo: '/img/garry.webp',
   socials: [
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/garryjrbruno/', icon: 'linkedin' },
