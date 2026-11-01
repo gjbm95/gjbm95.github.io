@@ -1,0 +1,98 @@
+@if (project(); as p) {
+  <article class="container project-page">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <ol>
+        <li><a routerLink="/">Inicio</a></li>
+        <li><a routerLink="/" fragment="proyectos">Proyectos</a></li>
+        <li aria-current="page">{{ p.name }}</li>
+      </ol>
+    </nav>
+
+    <header class="project-header">
+      <span class="eyebrow">Proyecto · {{ p.year }}</span>
+      <h1>{{ p.name }}</h1>
+      <p class="lead">{{ p.description }}</p>
+    </header>
+
+    <div class="project-layout">
+      <section class="gallery" aria-label="Galería de imágenes">
+        @if (current(); as img) {
+          <figure class="gallery-main card" [class.portrait]="isPortrait()">
+            <img
+              [src]="img.src"
+              [attr.width]="img.width"
+              [attr.height]="img.height"
+              [alt]="img.alt"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </figure>
+        }
+
+        @if (p.images.length > 1) {
+          <ul class="thumbs">
+            @for (img of p.images; track img.src; let i = $index) {
+              <li>
+                <button
+                  type="button"
+                  class="thumb"
+                  [class.active]="i === active()"
+                  [attr.aria-pressed]="i === active()"
+                  [attr.aria-label]="'Ver imagen ' + (i + 1) + ' de ' + p.images.length"
+                  (click)="select(i)"
+                >
+                  <img [src]="img.thumb" [attr.width]="img.width" [attr.height]="img.height" alt="" loading="lazy" decoding="async" />
+                </button>
+              </li>
+            }
+          </ul>
+        }
+      </section>
+
+      <aside class="details card">
+        <dl>
+          <div>
+            <dt>Año</dt>
+            <dd>{{ p.year }}</dd>
+          </div>
+          <div>
+            <dt>Tecnologías</dt>
+            <dd>
+              <ul class="chip-list">
+                @for (t of p.tech; track t) {
+                  <li class="chip">{{ t }}</li>
+                }
+              </ul>
+            </dd>
+          </div>
+          @if (p.links.length) {
+            <div>
+              <dt>Enlaces</dt>
+              <dd class="links">
+                @for (l of p.links; track l.url) {
+                  <a class="btn btn-ghost" [href]="l.url" target="_blank" rel="noopener">
+                    {{ l.label }} <app-icon name="external" />
+                  </a>
+                }
+              </dd>
+            </div>
+          }
+        </dl>
+        <a routerLink="/" fragment="contacto" class="btn btn-primary">¿Hacemos algo similar?</a>
+      </aside>
+    </div>
+
+    @if (neighbours(); as n) {
+      <nav class="pager" aria-label="Otros proyectos">
+        <a class="pager-link card" [routerLink]="['/proyectos', n.prev.slug]">
+          <app-icon name="arrow-left" />
+          <span><small>Anterior</small>{{ n.prev.name }}</span>
+        </a>
+        <a class="pager-link next card" [routerLink]="['/proyectos', n.next.slug]">
+          <span><small>Siguiente</small>{{ n.next.name }}</span>
+          <app-icon name="arrow-right" />
+        </a>
+      </nav>
+    }
+  </article>
+}
