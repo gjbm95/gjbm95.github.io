@@ -1,0 +1,70 @@
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header" [class.open]="menuOpen()">
+  <div class="container header-inner">
+    <a routerLink="/" class="brand" aria-label="Garry Jr. Bruno, ir al inicio" (click)="closeMenu()">
+      <span class="brand-mark" aria-hidden="true">GB</span>
+      <span class="brand-name">Garry Jr. Bruno</span>
+    </a>
+
+    <nav id="menu-principal" class="nav" aria-label="Principal">
+      <ul>
+        @for (item of nav; track item.fragment) {
+          <li>
+            <a routerLink="/" [fragment]="item.fragment" (click)="closeMenu()">{{ item.label }}</a>
+          </li>
+        }
+      </ul>
+      <a routerLink="/" fragment="contacto" class="btn btn-primary nav-cta" (click)="closeMenu()">
+        Hablemos
+      </a>
+    </nav>
+
+    <div class="header-actions">
+      <app-theme-toggle />
+      <button
+        type="button"
+        class="icon-btn menu-btn"
+        aria-controls="menu-principal"
+        [attr.aria-expanded]="menuOpen()"
+        [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+        (click)="menuOpen.set(!menuOpen())"
+      >
+        <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">GB</span>
+      <div>
+        <p class="footer-name">{{ profile.name }}</p>
+        <p class="footer-meta">{{ profile.role }} · {{ profile.location }}</p>
+      </div>
+    </div>
+
+    <ul class="footer-social">
+      <li>
+        <a class="icon-btn" [href]="'mailto:' + profile.email" aria-label="Enviar correo">
+          <app-icon name="mail" />
+        </a>
+      </li>
+      @for (s of profile.socials; track s.url) {
+        <li>
+          <a class="icon-btn" [href]="s.url" target="_blank" rel="noopener me" [attr.aria-label]="s.label">
+            <app-icon [name]="s.icon" />
+          </a>
+        </li>
+      }
+    </ul>
+
+    <p class="footer-copy">© {{ year }} {{ profile.name }}. Todos los derechos reservados.</p>
+  </div>
+</footer>

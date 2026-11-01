@@ -1,27 +1,50 @@
-# WebsitePersonal
+# garrybruno.com.ve
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+Sitio web personal de Garry Jr. Bruno, hecho con **Angular 22** (componentes standalone, signals, sin zone.js)
+y **pre-renderizado estático** (SSG): cada página se genera como HTML en el build, así que carga rápido,
+la indexan bien los buscadores y se puede publicar en GitHub Pages sin servidor.
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Node.js `^22.22.3`, `^24.15.0` o `>=26` (lo exige Angular 22).
+- npm 11.
 
-## Code scaffolding
+## Comandos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+| Comando           | Qué hace                                                                     |
+| ----------------- | ---------------------------------------------------------------------------- |
+| `npm start`       | Servidor de desarrollo en http://localhost:4200                              |
+| `npm run build`   | Build de producción pre-renderizado en `docs/` + `sitemap.xml` y `404.html`  |
+| `npm run preview` | Sirve la carpeta `docs/` en http://localhost:4300 para revisar el build      |
+| `npm test`        | Pruebas unitarias (Vitest)                                                   |
 
-## Build
+## Despliegue
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+GitHub Pages publica la carpeta `docs/`. Tras `npm run build`, haz commit de `docs/` y súbelo al
+repositorio de despliegue. El dominio sale de `public/CNAME`, que se copia en cada build.
 
-## Running unit tests
+## Editar contenido
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Proyectos:** `src/app/data/projects.ts`. Pon las imágenes en `public/img/projects/` en formato
+  WebP: una versión completa (máx. 1400 px) y una miniatura `-sm` (máx. 720 px). Cada proyecto
+  tiene su propia página `/proyectos/<slug>`, que se genera sola y entra en el sitemap.
+- **Perfil, servicios y tecnologías:** `src/app/data/profile.ts`.
+- **SEO global (meta, Open Graph, JSON-LD):** `src/index.html`. El SEO de cada página está en `src/app/core/seo.ts`.
 
-## Running end-to-end tests
+## Estructura
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+src/
+  index.html               SEO global y script del tema
+  styles.css               Tokens de diseño (claro/oscuro) y estilos base
+  app/
+    app.*                  Cabecera, menú y pie de página
+    app.routes*.ts         Rutas y pre-renderizado
+    core/seo.ts            Título, descripción, canonical, OG y JSON-LD por página
+    data/                  Contenido (perfil y proyectos)
+    pages/home             Página principal
+    pages/project          Detalle de proyecto
+    pages/not-found        Página 404
+    shared/                Iconos SVG y selector de tema
+scripts/postbuild.mjs      Genera sitemap.xml, 404.html y .nojekyll
+```
