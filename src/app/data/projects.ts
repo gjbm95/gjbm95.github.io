@@ -42,6 +42,19 @@ function img(file: string, alt: string, width: number, height: number): ProjectI
  */
 export const PROJECTS: Project[] = [
   {
+    slug: 'playguess',
+    name: 'PlayGuess',
+    year: 2026,
+    summary: 'Juego en línea para aprender idiomas mientras juegas charadas.',
+    description:
+      'Plataforma en línea que te permite practicar idiomas adivinando palabras jugando charadas con otras personas alrededor del mundo. Con esto se busca que el jugador entrene su oido y amplíe su vocabulario mientras se divierte.',
+    tech: ['Java', 'Spring Boot', 'MongoDB', 'Angular', 'TypeScript', 'HTML', 'CSS'],
+    links: [{ label: 'https://playguess.app', url: 'https://playguess.app' }],
+    images: [
+      img('playguess', 'Vista de la web principal de PlayGuess', 1347, 913),
+    ],
+  },
+  {
     slug: 'shoptools',
     name: 'ShopTools',
     year: 2025,
@@ -49,9 +62,9 @@ export const PROJECTS: Project[] = [
     description:
       'Plataforma gratuita para la gestión administrativa de negocios, que permite registrar ventas, compras, inventario, clientes y proveedores desde un solo lugar.',
     tech: ['Java', 'Spring Boot', 'Redis', 'MongoDB', 'Angular', 'TypeScript', 'HTML', 'CSS'],
-    links: [{ label: 'opencasher.com', url: 'https://opencasher.com' }],
+    links: [{ label: 'https://theshoptools.com', url: 'https://theshoptools.com' }],
     images: [
-      img('vista_1', 'Panel de operaciones de ShopTools con balance, ingresos y egresos', 1400, 918),
+      img('shoptools', 'Panel de operaciones de ShopTools con balance, ingresos y egresos', 1400, 818),
       img('vista_2', 'Otra vista de la plataforma ShopTools', 1385, 912),
     ],
   },
@@ -64,7 +77,7 @@ export const PROJECTS: Project[] = [
       'Sitio web para una empresa de confección de uniformes escolares, corporativos y médicos.',
     tech: ['Angular', 'TypeScript', 'HTML', 'CSS'],
     links: [{ label: 'modastimay.com.ve', url: 'https://modastimay.com.ve' }],
-    images: [img('modas-timay', 'Página de inicio del sitio web de Modas Timay', 1400, 803)],
+    images: [img('modastimay', 'Página de inicio del sitio web de Modas Timay', 1400, 729)],
   },
   {
     slug: 'on-pass',
