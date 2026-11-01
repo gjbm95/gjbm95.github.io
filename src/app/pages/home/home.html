@@ -1,0 +1,223 @@
+<!-- ===================== Hero ===================== -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="hero-hello"><span class="wave" aria-hidden="true">👋</span> Hola, mi nombre es</p>
+      <h1 id="hero-title" class="hero-title">
+        Garry Jr. Bruno
+        <span class="gradient-text">Desarrollador de software.</span>
+      </h1>
+      <p class="lead hero-lead">
+        Diseño y construyo software de punta a punta: arquitecturas basadas en microservicios,
+        aplicaciones móviles, páginas web y de escritorio, y servicios en la nube sobre AWS, Digital
+        Ocean y Firebase.
+      </p>
+
+      <div class="hero-actions">
+        <a routerLink="/" fragment="proyectos" class="btn btn-primary">
+          Ver proyectos <app-icon name="arrow-right" />
+        </a>
+        <a routerLink="/" fragment="contacto" class="btn btn-ghost">
+          <app-icon name="mail" /> Contactar
+        </a>
+      </div>
+
+      <ul class="hero-meta">
+        <li><app-icon name="map-pin" /> {{ profile.location }}</li>
+        <li><app-icon name="graduation" /> Ingeniero en Informática · UCAB</li>
+      </ul>
+    </div>
+
+    <div class="hero-photo">
+      <div class="photo-frame">
+        <img
+          [src]="profile.photo"
+          width="640"
+          height="640"
+          alt="Fotografía de Garry Jr. Bruno sonriendo con la ciudad de Caracas de fondo"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </div>
+      <div class="photo-badge card" aria-hidden="true">
+        <app-icon name="code" />
+        <span>Full-stack · Mobile · Cloud</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Sobre mí ===================== -->
+<section id="sobre-mi" class="section" aria-labelledby="about-title">
+  <div class="container about-grid">
+    <div class="section-head reveal">
+      <span class="eyebrow">Sobre mí</span>
+      <h2 id="about-title" class="section-title">Tecnología al servicio de las personas.</h2>
+    </div>
+
+    <div class="about-text reveal">
+      <p>
+        Soy <strong>Ingeniero en Informática</strong> egresado de la Universidad Católica Andrés
+        Bello y vivo en Caracas, Venezuela. Desde muy pequeño me ha apasionado el mundo de la
+        computación y todo lo relacionado con el manejo automatizado de la información.
+      </p>
+      <p>
+        Me motiva ver cómo, de la mano de los avances tecnológicos, podemos satisfacer las
+        necesidades de las personas: crear herramientas que faciliten cada vez más las tareas
+        cotidianas y aporten algo positivo a su entorno.
+      </p>
+      <p>
+        A lo largo de mi formación y carrera he aprendido a trabajar en equipo, valorando el
+        esfuerzo de cada integrante y escuchando sus puntos de vista, con un objetivo claro:
+        entregar buenos resultados en cada proyecto.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Servicios ===================== -->
+<section id="servicios" class="section section-alt" aria-labelledby="services-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Lo que hago</span>
+      <h2 id="services-title" class="section-title">Soluciones completas, de la idea a producción.</h2>
+    </div>
+
+    <ul class="services">
+      @for (s of services; track s.title) {
+        <li class="service card reveal">
+          <span class="service-icon"><app-icon [name]="s.icon" /></span>
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.text }}</p>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== Tecnologías ===================== -->
+<section id="tecnologias" class="section" aria-labelledby="skills-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Tecnologías</span>
+      <h2 id="skills-title" class="section-title">Herramientas con las que trabajo.</h2>
+    </div>
+
+    <div class="skills">
+      @for (group of skills; track group.title) {
+        <div class="skill-group card reveal">
+          <h3>{{ group.title }}</h3>
+          <ul class="chip-list">
+            @for (item of group.items; track item) {
+              <li class="chip">{{ item }}</li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Proyectos ===================== -->
+<section id="proyectos" class="section section-alt" aria-labelledby="projects-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Portafolio</span>
+      <h2 id="projects-title" class="section-title">Proyectos seleccionados.</h2>
+      <p class="lead">Plataformas, apps y sitios web en los que he participado.</p>
+    </div>
+
+    <ul class="projects">
+      @for (p of projects; track p.slug; let first = $first) {
+        <li class="project reveal" [class.featured]="first">
+          <a class="project-card card" [routerLink]="['/proyectos', p.slug]">
+            <div class="project-media" [class.portrait]="p.images[0].height > p.images[0].width">
+              <img
+                [src]="p.images[0].thumb"
+                [attr.width]="p.images[0].width"
+                [attr.height]="p.images[0].height"
+                [alt]="p.images[0].alt"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3>{{ p.name }}</h3>
+                <span class="project-year">{{ p.year }}</span>
+              </div>
+              <p>{{ p.summary }}</p>
+              <ul class="chip-list">
+                @for (t of p.tech.slice(0, 4); track t) {
+                  <li class="chip">{{ t }}</li>
+                }
+              </ul>
+              <span class="project-more">Ver proyecto <app-icon name="arrow-right" /></span>
+            </div>
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== Contacto ===================== -->
+<section id="contacto" class="section" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="contact card reveal">
+      <div class="contact-info">
+        <span class="eyebrow">Contacto</span>
+        <h2 id="contact-title" class="section-title">¿Tienes un proyecto en mente?</h2>
+        <p class="lead">
+          Cuéntame qué necesitas y conversemos sobre cómo hacerlo realidad. Respondo lo antes
+          posible.
+        </p>
+
+        <div class="contact-email">
+          <a [href]="'mailto:' + profile.email" class="email-link">
+            <app-icon name="mail" /> {{ profile.email }}
+          </a>
+          <button type="button" class="btn btn-ghost copy-btn" (click)="copyEmail()">
+            {{ copied() ? '¡Copiado!' : 'Copiar' }}
+          </button>
+        </div>
+
+        <ul class="contact-social">
+          @for (s of profile.socials; track s.url) {
+            <li>
+              <a class="btn btn-ghost" [href]="s.url" target="_blank" rel="noopener me">
+                <app-icon [name]="s.icon" /> {{ s.label }}
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <form class="contact-form" (submit)="sendMessage($event)" aria-label="Enviar un mensaje">
+        <div class="field">
+          <label for="cf-name">Tu nombre</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="cf-subject">Asunto</label>
+          <input id="cf-subject" name="subject" type="text" required />
+        </div>
+        <div class="field">
+          <label for="cf-message">Mensaje</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Enviar mensaje <app-icon name="send" />
+        </button>
+        <p class="form-note" aria-live="polite">
+          @if (formStatus() === 'opened') {
+            Se abrió tu aplicación de correo con el mensaje listo para enviar.
+          } @else {
+            El mensaje se abrirá en tu aplicación de correo.
+          }
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
