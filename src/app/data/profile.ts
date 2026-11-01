@@ -4,7 +4,7 @@ export const PROFILE = {
   name: 'Garry Jr. Bruno',
   role: 'Desarrollador de software',
   location: 'Caracas, Venezuela',
-  email: 'garry387@gmail.com',
+  email: 'proyectos@garrybruno.com.ve',
   birthYear: 1996,
   photo: '/img/garry.webp',
   socials: [
